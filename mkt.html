@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Servey</title>
+    <link rel="stylesheet" href="mkt.css">
+</head>
+<body>
+    <div class="mkt-section">
+       <div class="from-title"> <h2>Market Servey</h2></div> <br><br>
+            <div class="select-option">
+              <div class="select-options" id="selectOptions">
+                <h5 class="heding1">Division</h5>
+                <select name="" id="country" onchange="populateStates()">
+                    <option value="" selected disabled>--Select Division--</option>
+                    <option value="dhakawest">Dhaka West Division</option>
+                    <option value="bogura">Bogura Division</option>
+                    <option value="rangpur">Rangpur Division</option>
+                </select> 
+                <h5>Area</h5> 
+                 <select class="select" name="" id="state" onchange="populateCities()">
+                    <option value="" selected disabled>--Secelect A Area--</option>
+                </select> 
+              </div>
+            <div class="select-options">
+                <h5>Territory</h5> 
+            <select name="" id="city" onchange="populateMarket()">
+                <option value="" selected disabled>--Select A Territory--</option>
+            </select>
+            <h5>Market Name</h5> 
+            <select name="" id="market" onchange="populateRoute()">
+                <option value="" selected disabled>--Select Market--</option>
+            </select>
+            </div>
+           <div class="select-options">
+            <h5>Route Name</h5> 
+            <select name="" id="route">
+                <option value="" selected disabled>--Select Route--</option>
+            </select>
+            <h5>Weekly Sales</h5> 
+            <select name="" id="outlet-type" onchange="populateSales()">
+                <option value="">--Select Weekly Sales--</option>
+                <option value="A Cetagory">Above 1250 TK</option>
+                <option value="B Cetagory">751-1249 TK</option>
+                <option value="C Cetagory">251-750 TK</option>
+                <option value="T Cetagory">0-250 TK</option>
+            </select>
+           </div>
+            <div class="select-options">
+                <h5>Catagory Name</h5>
+            <select name="" id="outlet-catagory">
+                <option value="" id="result"></option>
+            </select>
+            <h5>Present Stock Status</h5> 
+            <select name="" id="stock" onchange="populateStock()">
+                <option value="">--Choose--</option>
+                <option value="Sufficient">Above 10 SKU's</option>
+                <option value="Insufficient">5 to 9 SKU's</option>
+                <option value="Poor">Less then 5 SKU's</option>
+                <option value="Nill">Nill</option>
+            </select>
+            </div>
+            <div class="select-options">
+                <h5>Stock Stetus</h5>
+            <select name="" id="stock-stetus">
+                <option value="" id="report"></option>
+            </select>
+            <span class="inputtext">Cluster/Bit Name</span>
+                <input type="text" placeholder="Write Cluster Name" required>
+            </div>
+        <div class="main">
+            <h3>Get In Touch</h3>
+            <form method="post" id="form">
+                <div id="res"></div>
+                <div class="form-outer">
+                    <label>Outlet Name</label>
+                    <input type="text" name="name">
+                </div>
+                <div class="form-outer">
+                    <label>Outlet Owner</label>
+                    <input type="text" name="email">
+                </div>
+                <div class="form-outer">
+                    <label>Outlet Address</label>
+                    <input type="text" name="phone">
+                </div>
+                <div class="form-outer">
+                    <label>Total Number Of SKU's</label>
+                    <input type="text" name="sku">
+                </div>
+                <div class="form-outer">
+                    <label>Available Product</label>
+                    <input type="text" name="product">
+                </div>
+                <div class="form-outer">
+                    <label>Submitted By</label>
+                    <input type="text" name="submitBy">
+                </div>
+                <div class="form-outer">
+                    <label>Mobile Number</label>
+                    <input type="number" name="number">
+                </div>
+                <div class="form-outer">
+                    <button name="btn">Submit</button>
+                </div>
+            </form>
+            </div> 
+            </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
